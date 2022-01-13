@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Orchestral-Suite-no.-2-in-B-minor-BWV-1067-7.-Badinerie.mp3-b034231eb34a8d79651ad2e93458e65c.mp3str"
+
+[deps]
+
+source_file="res://Orchestral-Suite-no.-2-in-B-minor-BWV-1067-7.-Badinerie.mp3"
+dest_files=[ "res://.import/Orchestral-Suite-no.-2-in-B-minor-BWV-1067-7.-Badinerie.mp3-b034231eb34a8d79651ad2e93458e65c.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

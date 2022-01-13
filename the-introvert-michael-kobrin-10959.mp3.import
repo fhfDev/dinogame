@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/the-introvert-michael-kobrin-10959.mp3-91e829faaf35531bd42afd5a75b2076c.mp3str"
+
+[deps]
+
+source_file="res://the-introvert-michael-kobrin-10959.mp3"
+dest_files=[ "res://.import/the-introvert-michael-kobrin-10959.mp3-91e829faaf35531bd42afd5a75b2076c.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

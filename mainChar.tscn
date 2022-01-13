@@ -1,0 +1,78 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Run (3).png" type="Texture" id=1]
+[ext_resource path="res://KinematicBody2D.gd" type="Script" id=2]
+[ext_resource path="res://Idle (9).png" type="Texture" id=3]
+[ext_resource path="res://Run (2).png" type="Texture" id=4]
+[ext_resource path="res://Idle (1).png" type="Texture" id=5]
+[ext_resource path="res://Jump (12).png" type="Texture" id=6]
+[ext_resource path="res://Run (4).png" type="Texture" id=7]
+[ext_resource path="res://Run (5).png" type="Texture" id=8]
+[ext_resource path="res://jump_04.wav" type="AudioStream" id=10]
+[ext_resource path="res://the-introvert-michael-kobrin-10959.mp3" type="AudioStream" id=11]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 185, 200 )
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "stoj",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 1 ), ExtResource( 7 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "pohyb",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "vyskok",
+"speed": 5.0
+} ]
+
+[node name="postava" type="KinematicBody2D"]
+position = Vector2( 517, 262 )
+scale = Vector2( 0.1, 0.1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -145, -10 )
+scale = Vector2( 0.999999, 0.999999 )
+shape = SubResource( 3 )
+
+[node name="postavicka" type="AnimatedSprite" parent="."]
+position = Vector2( 0, 4.99983 )
+scale = Vector2( 1, 0.961968 )
+frames = SubResource( 2 )
+animation = "idle"
+
+[node name="zvuk" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 10 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+limit_left = -450
+limit_top = -220
+limit_right = 3600
+limit_bottom = 830
+smoothing_enabled = true
+smoothing_speed = 2.0
+drag_margin_left = 0.15
+drag_margin_top = 0.15
+drag_margin_right = 0.15
+drag_margin_bottom = 0.15
+
+[node name="hudba" type="AudioStreamPlayer" parent="."]
+process_priority = 1
+stream = ExtResource( 11 )
+autoplay = true

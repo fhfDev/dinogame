@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://spike.png" type="Texture" id=1]
+
+[node name="Node2D" type="KinematicBody2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2( 435.491, 113.37 )
+scale = Vector2( 0.444862, 0.444862 )
+polygon = PoolVector2Array( 749.69, 244.188, 747.442, 194.734, 751.938, 154.272, 776.665, 17.1511, 787.904, 77.8441, 796.896, 91.3314, 832.862, -95.2433, 865, 95, 873.324, 75.5962, 884.563, 21.6469, 913.786, 158.768, 916.034, 244.188 )
+
+[node name="spike" type="Sprite" parent="."]
+position = Vector2( 805, 147 )
+scale = Vector2( 0.508941, 0.508941 )
+texture = ExtResource( 1 )
