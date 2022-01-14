@@ -1,20 +1,13 @@
 extends Node
 
+var spike = preload("spike.tscn")
+var bird = preload("bird.tscn")
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	direction.x = speed
-	view = 1
-	$postavicka.play("pohyb")
-	$postavicka.flip_h = false
-
+#func _on_Timer_timeout():
+#	randomize()
+#	var obstacles = [spike,bird]
+#	var obstacle = obstacles[randi() % obstacles.size()]
+#	var object = obstacle.instance()
+#	print(object)
+#	#object.position = Vector2($main_character/postavicka.position,0)
+#	add_child(object)

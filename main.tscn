@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://PARALLAX/1920x1080/layer_02_1920 x 1080.png" type="Texture" id=1]
 [ext_resource path="res://PARALLAX/1920x1080/layer_01_1920 x 1080.png" type="Texture" id=2]
@@ -6,9 +6,27 @@
 [ext_resource path="res://mainChar.tscn" type="PackedScene" id=4]
 [ext_resource path="res://platform.tscn" type="PackedScene" id=5]
 [ext_resource path="res://bird.tscn" type="PackedScene" id=6]
+[ext_resource path="res://main.gd" type="Script" id=7]
 [ext_resource path="res://spike.tscn" type="PackedScene" id=8]
 
 [node name="hlavna" type="Node"]
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 31.0, -69.0, 5.0 ]
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+visible = false
+anchor_right = 1.0
+margin_right = -984.0
+margin_bottom = 40.0
+text = "0
+"
+fit_content_height = true
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -17,10 +35,10 @@ motion_scale = Vector2( 0.2, 1 )
 motion_mirroring = Vector2( 1920, 0 )
 
 [node name="SpacestarsUpr" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( 657, 172 )
+position = Vector2( 1165, 70 )
 z_index = -1
 texture = ExtResource( 3 )
-offset = Vector2( -397, 29 )
+offset = Vector2( -905, 131 )
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2( 0.4, 1 )
@@ -68,13 +86,18 @@ position = Vector2( 1600, 861 )
 scale = Vector2( 10, 1 )
 
 [node name="spike" parent="." instance=ExtResource( 8 )]
-position = Vector2( 47, -69 )
+position = Vector2( -666, -271 )
 
 [node name="bird" parent="." instance=ExtResource( 6 )]
-position = Vector2( 696, -329 )
+position = Vector2( 830, -130 )
 
 [node name="bird2" parent="." instance=ExtResource( 6 )]
-position = Vector2( 909, -333 )
+position = Vector2( 1051, -130 )
 
 [node name="spike2" parent="." instance=ExtResource( 8 )]
-position = Vector2( 797, -69 )
+position = Vector2( 158, -272 )
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
