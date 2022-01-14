@@ -2,7 +2,7 @@
 Basic dino game in Godot created for school purposes
 
 # Keyboard controls 
-| Key  | Action |
+| KEY  | ACTION |
 | ------------- | ------------- |
 | D / right arrow | Move right  |
 | W / up arrow | Jump  |
