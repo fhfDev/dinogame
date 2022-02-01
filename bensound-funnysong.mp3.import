@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/bensound-funnysong.mp3-359148f20cee5be24d83083e946d538a.mp3str"
+
+[deps]
+
+source_file="res://bensound-funnysong.mp3"
+dest_files=[ "res://.import/bensound-funnysong.mp3-359148f20cee5be24d83083e946d538a.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

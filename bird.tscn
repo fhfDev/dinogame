@@ -19,9 +19,11 @@ animations = [ {
 
 [node name="Node2D" type="KinematicBody2D"]
 script = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Area2D" type="Area2D" parent="."]
-position = Vector2( 289, 112 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource( 2 )
@@ -31,9 +33,5 @@ position = Vector2( 1, 10 )
 scale = Vector2( 0.0718954, 0.0718954 )
 frames = SubResource( 1 )
 animation = "flying"
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-visible = false
-polygon = PoolVector2Array( 524, 342, 531, 340, 531, 337, 528, 335, 523, 334, 520, 334, 519, 329, 518, 324, 515, 318, 517, 316, 518, 314, 517, 309, 516, 307, 514, 311, 513, 312, 512, 308, 509, 306, 506, 305, 507, 309, 499, 304, 489, 302, 478, 303, 476, 304, 471, 299, 468, 294, 466, 297, 465, 301, 464, 304, 465, 308, 466, 309, 459, 303, 457, 301, 455, 297, 454, 295, 453, 295, 450, 300, 450, 304, 450, 308, 451, 309, 449, 311, 448, 315, 450, 319, 451, 323, 451, 328, 453, 331, 454, 333, 456, 337, 457, 341, 459, 344, 464, 347, 472, 349, 470, 351, 467, 352, 463, 353, 463, 356, 469, 356, 473, 354, 475, 352, 476, 350, 480, 350, 482, 350, 484, 350, 483, 352, 481, 353, 477.78, 354.288, 476, 355, 477, 357, 478, 359, 484, 356, 488, 353, 488, 350, 493, 350, 499, 350, 511, 347, 516, 349, 523, 351, 528, 350, 530, 348, 530, 346, 528, 344, 525, 343 )
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
