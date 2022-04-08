@@ -8,11 +8,8 @@
 [ext_resource path="res://Jump (12).png" type="Texture" id=6]
 [ext_resource path="res://Run (4).png" type="Texture" id=7]
 [ext_resource path="res://Run (5).png" type="Texture" id=8]
+[ext_resource path="res://bensound-funnysong.mp3" type="AudioStream" id=9]
 [ext_resource path="res://jump_04.wav" type="AudioStream" id=10]
-[ext_resource path="res://the-introvert-michael-kobrin-10959.mp3" type="AudioStream" id=11]
-
-[sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 185, 200 )
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
@@ -21,9 +18,9 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 3 ) ],
+"frames": [ ExtResource( 6 ) ],
 "loop": true,
-"name": "stoj",
+"name": "vyskok",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 1 ), ExtResource( 7 ), ExtResource( 8 ) ],
@@ -31,28 +28,24 @@ animations = [ {
 "name": "pohyb",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 6 ) ],
+"frames": [ ExtResource( 3 ) ],
 "loop": true,
-"name": "vyskok",
+"name": "stoj",
 "speed": 5.0
 } ]
 
+[sub_resource type="CapsuleShape2D" id=3]
+radius = 280.0
+height = 100.001
+
 [node name="postava" type="KinematicBody2D"]
-position = Vector2( 517, 262 )
+position = Vector2( 531, 253 )
 scale = Vector2( 0.1, 0.1 )
 script = ExtResource( 2 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -145, -10 )
-scale = Vector2( 0.999999, 0.999999 )
-shape = SubResource( 3 )
 
 [node name="postavicka" type="AnimatedSprite" parent="."]
-position = Vector2( 0, 4.99983 )
-scale = Vector2( 1, 0.961968 )
+position = Vector2( 245.594, -158.988 )
+scale = Vector2( 1.72233, 1.65683 )
 frames = SubResource( 2 )
 animation = "idle"
 
@@ -74,5 +67,10 @@ drag_margin_bottom = 0.15
 
 [node name="hudba" type="AudioStreamPlayer" parent="."]
 process_priority = 1
-stream = ExtResource( 11 )
+stream = ExtResource( 9 )
 autoplay = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 60, -170 )
+scale = Vector2( 0.999999, 0.999999 )
+shape = SubResource( 3 )

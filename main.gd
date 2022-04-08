@@ -1,20 +1,11 @@
 extends Node
+var spike = preload("spike.tscn")
+var bird = preload("bird.tscn")
 
+func _on_nextLevelArea_body_entered(body):
+	if ($main_character.score == $main_character.neededScore):
+		get_tree().change_scene("res://level2.tscn")
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	direction.x = speed
-	view = 1
-	$postavicka.play("pohyb")
-	$postavicka.flip_h = false
-
+func _on_Area2D_body_entered(body):
+		if body.name == "main_character":
+			get_tree().change_scene("res://main.tscn")

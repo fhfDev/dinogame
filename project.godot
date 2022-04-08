@@ -10,13 +10,11 @@ config_version=4
 
 [application]
 
-config/name="CV5PG"
+config/name="PG_godotProjekt"
 run/main_scene="res://main.tscn"
-config/icon="res://icon.png"
 
 [display]
 
-window/size/fullscreen=true
 window/stretch/mode="2d"
 
 [input]
@@ -44,11 +42,12 @@ koniec={
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777217,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
  ]
 }
-stlac={
-"deadzone": 0.5,
-"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":32,"unicode":0,"echo":false,"script":null)
- ]
-}
+
+[layer_names]
+
+2d_physics/layer_1="player"
+2d_physics/layer_2="cactus"
+2d_physics/layer_3="fall"
 
 [physics]
 
